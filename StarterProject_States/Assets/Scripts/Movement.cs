@@ -56,6 +56,7 @@ public class Movement : MonoBehaviour
     // They also control the animation system in unity
     public bool canMove;
     public bool wallGrab;
+    public bool wallClimb;
     public bool wallJumped;
     public bool wallSlide;
     public bool isDashing;
@@ -244,7 +245,18 @@ public class Movement : MonoBehaviour
                 // Limit horizontal movement
                 if (xInput > .2f || xInput < -.2f)
                 {
+                    
                     rb.velocity = new Vector2(rb.velocity.x, 0);
+                }
+                
+                //Checks for vertical movement
+                if (yInput > .2f || yInput < -.2f)
+                {
+                    wallClimb = true;
+                }
+                else
+                {
+                    wallClimb = false;
                 }
 
                 // Vertical Movement, slower when climbing

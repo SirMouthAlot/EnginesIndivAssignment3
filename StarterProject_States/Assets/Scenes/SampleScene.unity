@@ -4550,6 +4550,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3286969c5df8a1e4bb64bc92ea46495e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  currentState: 0
   rb: {fileID: 0}
   speed: 7
   jumpForce: 12
@@ -4558,6 +4559,7 @@ MonoBehaviour:
   dashSpeed: 40
   canMove: 1
   wallGrab: 0
+  wallClimb: 0
   wallJumped: 0
   wallSlide: 0
   isDashing: 0
@@ -4598,8 +4600,8 @@ MonoBehaviour:
   wallSide: 0
   collisionRadius: 0.1
   bottomOffset: {x: 0, y: -0.79}
-  rightOffset: {x: 0.5, y: -0.33}
-  leftOffset: {x: -0.5, y: -0.33}
+  rightOffset: {x: 0.5, y: -0.6}
+  leftOffset: {x: -0.5, y: -0.6}
 --- !u!1 &234361388
 GameObject:
   m_ObjectHideFlags: 0

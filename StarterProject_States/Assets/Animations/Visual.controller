@@ -102,8 +102,8 @@ AnimatorStateTransition:
   - m_ConditionMode: 1
     m_ConditionEvent: wallGrab
     m_EventTreshold: 0
-  - m_ConditionMode: 4
-    m_ConditionEvent: VerticalAxis
+  - m_ConditionMode: 2
+    m_ConditionEvent: wallClimb
     m_EventTreshold: 0.1
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 5821750204541512779}
@@ -327,19 +327,25 @@ AnimatorController:
     m_DefaultInt: 0
     m_DefaultBool: 0
     m_Controller: {fileID: 9100000}
-  - m_Name: onWall
-    m_Type: 4
-    m_DefaultFloat: 0
-    m_DefaultInt: 0
-    m_DefaultBool: 0
-    m_Controller: {fileID: 9100000}
   - m_Name: onRightWall
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
     m_Controller: {fileID: 9100000}
+  - m_Name: onWall
+    m_Type: 4
+    m_DefaultFloat: 0
+    m_DefaultInt: 0
+    m_DefaultBool: 0
+    m_Controller: {fileID: 9100000}
   - m_Name: wallGrab
+    m_Type: 4
+    m_DefaultFloat: 0
+    m_DefaultInt: 0
+    m_DefaultBool: 0
+    m_Controller: {fileID: 9100000}
+  - m_Name: wallClimb
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
@@ -503,8 +509,8 @@ AnimatorStateTransition:
   - m_ConditionMode: 1
     m_ConditionEvent: canMove
     m_EventTreshold: 0
-  - m_ConditionMode: 3
-    m_ConditionEvent: VerticalAxis
+  - m_ConditionMode: 1
+    m_ConditionEvent: wallClimb
     m_EventTreshold: 0.2
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 6111618815012030773}
@@ -512,9 +518,9 @@ AnimatorStateTransition:
   m_Mute: 0
   m_IsExit: 0
   serializedVersion: 3
-  m_TransitionDuration: 0
+  m_TransitionDuration: 0.0029803514
   m_TransitionOffset: 0
-  m_ExitTime: 0.625
+  m_ExitTime: 0.45993078
   m_HasExitTime: 0
   m_HasFixedDuration: 1
   m_InterruptionSource: 0
@@ -664,8 +670,8 @@ AnimatorState:
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
-  - {fileID: -5370532637033391147}
   - {fileID: 5470231567396010726}
+  - {fileID: -5370532637033391147}
   m_StateMachineBehaviours: []
   m_Position: {x: 50, y: 50, z: 0}
   m_IKOnFeet: 0
@@ -726,7 +732,7 @@ AnimatorStateMachine:
     m_Position: {x: 250, y: 190, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 9119590789230998211}
-    m_Position: {x: 250, y: -60, z: 0}
+    m_Position: {x: 260, y: -60, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 8712292835665259617}
     m_Position: {x: 250, y: 60, z: 0}
